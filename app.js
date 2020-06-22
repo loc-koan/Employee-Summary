@@ -16,7 +16,6 @@ const render = require("./lib/htmlRenderer");
 
 /* from homework 9 - ReadMe Generator*/ 
 
-/* start of questions*/
 function promptUser() {
     return inquirer.prompt([
         {
