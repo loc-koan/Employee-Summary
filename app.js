@@ -14,42 +14,31 @@ const render = require("./lib/htmlRenderer");
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
-/* from homework 9 - ReadMe Generator*/ 
+/* from homework 9 - ReadMe Generator*/
 
-function promptUser() {
-    return inquirer.prompt([
-        {
-            type: 'input',
-            name: 'name',
-            message: 'What is the employee name',
-        },
-        {
-            type: 'input',
-            name: 'role',
-            message: 'What is the employee role?',
-        },
-        {
-            type: 'input',
-            name: 'id',
-            message: 'What is employee id?',
-        },
-        {
-            type: 'input',
-            name: 'school',
-            message: 'What school did the employee go to?',
-        },
-        {
-            type: 'input',
-            name: 'github',
-            message: 'What is the employee Github profile',
-        },
-        {
-            type: 'input',
-            name: 'officeNumber',
-            message: 'What is the employee office number',
-        },
-    ]);
-}
+const userEndResponse = [];
+const userAnswers = [
+    {
+        type: 'input',
+        name: 'name',
+        message: 'What is the employee name?',
+    },
+    {
+        type: 'input',
+        name: 'id',
+        message: 'What is employee id?',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is the employee email?',
+    },
+    {
+        type: 'input',
+        name: 'role',
+        message: 'What is the employee role?',
+    }
+]
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
